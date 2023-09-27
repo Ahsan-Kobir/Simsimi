@@ -1,30 +1,28 @@
-package com.akapps.simsimi;
+package com.akapps.simsimi.Adapters;
 
 import android.content.Context;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.akapps.simsimi.Models.Message;
-import com.akapps.simsimi.databinding.ItemMessageReceivedBinding;
-import com.akapps.simsimi.databinding.ItemMessageSentBinding;
+import com.akapps.simsimi.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.MyViewHolder> {
     private Context context;
-    private ArrayList<Message> chatListArray;
+    private List<Message> chatListArray;
     public static final int TYPE_SENT = 0;
     public static final int TYPE_RECEIVED = 1;
 
 
-    public ChatsAdapter(Context context, ArrayList<Message> chatListArray){
+    public ChatsAdapter(Context context, List<Message> chatListArray){
         this.context = context;
         this.chatListArray = chatListArray;
     }
@@ -37,6 +35,10 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.MyViewHolder
                 parent,
                 false);
         return new MyViewHolder(view);
+    }
+
+    public void setItems(List<Message> chatListArray){
+        this.chatListArray = chatListArray;
     }
 
     @Override

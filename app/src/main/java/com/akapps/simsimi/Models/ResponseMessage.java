@@ -4,13 +4,7 @@ import java.io.Serializable;
 import java.lang.String;
 
 public class ResponseMessage implements Serializable {
-  private String contact;
-
-  private String ip;
-
   private String language;
-
-  private Donate donate;
 
   private String time;
 
@@ -22,21 +16,6 @@ public class ResponseMessage implements Serializable {
 
   private String status;
 
-  public String getContact() {
-    return this.contact;
-  }
-
-  public void setContact(String contact) {
-    this.contact = contact;
-  }
-
-  public String getIp() {
-    return this.ip;
-  }
-
-  public void setIp(String ip) {
-    this.ip = ip;
-  }
 
   public String getLanguage() {
     return this.language;
@@ -44,14 +23,6 @@ public class ResponseMessage implements Serializable {
 
   public void setLanguage(String language) {
     this.language = language;
-  }
-
-  public Donate getDonate() {
-    return this.donate;
-  }
-
-  public void setDonate(Donate donate) {
-    this.donate = donate;
   }
 
   public String getTime() {
@@ -94,15 +65,4 @@ public class ResponseMessage implements Serializable {
     this.status = status;
   }
 
-  public static class Donate implements Serializable {
-    private String paypal;
-
-    public String getPaypal() {
-      return this.paypal;
-    }
-
-    public void setPaypal(String paypal) {
-      this.paypal = paypal;
-    }
-  }
 }

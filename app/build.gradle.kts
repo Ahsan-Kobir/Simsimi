@@ -34,6 +34,11 @@ android {
 
 dependencies {
 
+    val room_version = "2.5.2"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
